@@ -54,7 +54,7 @@ if [ $# -eq 0 ]
            if [ "$DB_ADAPTER" == "postgres" ]
               then
                 URI="postgresql://"
-                URI+=$DB_MYUSER
+                URI+=$DB_USER
                 URI+=":"$DB_PASSWORD
                 URI+="@"$DB_HOST
                 URI+=":"$DB_PORT
