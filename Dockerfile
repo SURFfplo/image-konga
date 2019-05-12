@@ -14,8 +14,8 @@ RUN apk upgrade --update \
         /app/screenshots \
         /app/test
 
-EXPOSE 1337
+# EXPOSE 1337
 
-VOLUME /app/kongadata
+# VOLUME /app/kongadata
 
 ENTRYPOINT ["/app/start.sh"]
