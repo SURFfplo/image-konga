@@ -44,7 +44,7 @@ if [ $# -eq 0 ]
         esac
     done
     if [ $OPTIND -eq 1 ]
-            If expected argument omitted try to execute the command:
+            # If expected argument omitted try to execute the command:
             then exec "$@"
 
 #    echo $COMMAND
