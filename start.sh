@@ -41,6 +41,8 @@ if [ $# -eq 0 ]
             c) COMMAND=${OPTARG};;
             a) ADAPTER=${OPTARG};;
             u) URI=${OPTARG};;
+            :) #If expected argument omitted try to execute the command:
+               exec "$@" ;;
         esac
     done
 
