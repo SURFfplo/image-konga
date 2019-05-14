@@ -43,13 +43,16 @@ if [ $# -eq 0 ]
             u) URI=${OPTARG};;
         esac
     done
+    if [ $OPTIND -eq 1 ]
+            If expected argument omitted try to execute the command:
+            then exec "$@"
 
 #    echo $COMMAND
 #    echo $ADAPTER
 #    echo $URI
 #    echo $PORT
 
-    if [ "$COMMAND" == "prepare_docker_env" ]
+    elif [ "$COMMAND" == "prepare_docker_env" ]
         then
            if [ "$DB_ADAPTER" == "postgres" ]
               then
@@ -74,5 +77,3 @@ if [ $# -eq 0 ]
             exit
     fi
 fi
-#If expected argument omitted try to execute the command:
-exec "$@" 
